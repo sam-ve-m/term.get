@@ -5,8 +5,8 @@ from decouple import config
 from src.core.interfaces.repositories.terms.interface import (
     ITermRepository,
 )
-from src.domain.enums.terms import TermsFileType
-from src.domain.exceptions.model import FileNotFound
+from src.domain.enums.terms.enum import TermsFileType
+from src.domain.exceptions.exceptions import FileNotFound
 from src.infrastructures.s3.s3 import S3Infrastructure
 
 

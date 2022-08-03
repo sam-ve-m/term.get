@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 
-from src.domain.enums.terms import TermsFileType
+from src.domain.enums.terms.enum import TermsFileType
 
 
 class ITermRepository(ABC):

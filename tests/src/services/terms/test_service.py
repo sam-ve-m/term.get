@@ -1,33 +1,15 @@
-import pytest
+from unittest.mock import patch
 
-from src.domain.exceptions.model import FileNotFound
+from pytest import mark
+
 from src.domain.models.request.model import TermModel
+from src.repositories.cache.repository import CacheRepository
 from src.repositories.terms.repository import (
     TermRepository,
 )
-from src.repositories.cache.repository import CacheRepository
 from src.services.terms.service import TermService
-from unittest.mock import patch
-from pytest import mark
 
 term_model_dummy = TermModel(file_type="term_refusal")
-
-
-# @mark.asyncio
-# @patch.object(TermService, "_BankVisualIdentityService__get_logo_url")
-# async def test_get_bank_logo(get_url_mock):
-#     url_return_value = "https://www.image_link_here.com"
-#     get_url_mock.return_value = url_return_value
-#     result = await TermService.get_bank_logo(term_model_dummy)
-#     assert await get_url_mock.called_with(term_model_dummy.bank_code)
-#     assert result == url_return_value
-
-
-# def test_get_logo_path(monkeypatch):
-#     monkeypatch.setattr(TermService, "_BankVisualIdentityService__images_folder", "banks")
-#     expected_result = f"banks/79/logo.png"
-#     result = TermService._BankVisualIdentityService__get_logo_path("79")
-#     assert result == expected_result
 
 
 @mark.asyncio

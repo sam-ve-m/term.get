@@ -18,12 +18,6 @@ class CacheRepository(ICacheRepository):
         try:
             SyncCache.save(cls.enum_key.format(term_file), str(term_link), int(time))
             return True
-        except ValueError as error:
-            Gladsheim.error(error=error, message="Error saving term link in cache.")
-            return False
-        except TypeError as error:
-            Gladsheim.error(error=error, message="Error saving term link in cache.")
-            return False
         except Exception as error:
             Gladsheim.error(error=error, message="Error saving term link in cache.")
             return False

@@ -7,7 +7,7 @@ from pytest import mark
 from werkzeug.test import Headers
 
 from main import get_term
-from src.domain.exceptions.model import FileNotFound
+from src.domain.exceptions.exceptions import FileNotFound
 from src.services.terms.service import TermService
 
 request_ok = "?file_type=term_refusal"

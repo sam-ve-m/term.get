@@ -3,8 +3,8 @@ from unittest.mock import patch, AsyncMock, MagicMock
 import pytest
 from pytest import mark
 
-from src.domain.enums.terms import TermsFileType
-from src.domain.exceptions.model import FileNotFound
+from src.domain.enums.terms.enum import TermsFileType
+from src.domain.exceptions.exceptions import FileNotFound
 from src.infrastructures.s3.s3 import S3Infrastructure
 from src.repositories.terms.repository import (
     TermRepository,

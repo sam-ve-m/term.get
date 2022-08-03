@@ -4,8 +4,8 @@ from etria_logger import Gladsheim
 from flask import request, Request, Response
 from heimdall_client import Heimdall, HeimdallStatusResponses
 
-from src.domain.enums.response.code import InternalCode
-from src.domain.exceptions.model import UnauthorizedError, FileNotFound
+from src.domain.enums.response_code.enum import InternalCode
+from src.domain.exceptions.exceptions import UnauthorizedError, FileNotFound
 from src.domain.models.request.model import TermModel
 from src.domain.models.response.model import ResponseModel
 from src.services.terms.service import TermService
