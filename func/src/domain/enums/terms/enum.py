@@ -19,4 +19,5 @@ class TermsFileType(Enum):
     TERM_ALL_AGREEMENT_GRINGO_DL = "term_all_agreement_gringo_dl"
 
     TERM_GRINGO_WORLD = "term_gringo_world"
+    TERM_OUROINVEST = "term_ouroinvest"
     TERM_GRINGO_WORLD_GENERAL_ADVICES = "term_gringo_world_general_advices"
