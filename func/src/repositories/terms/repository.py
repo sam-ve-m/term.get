@@ -26,7 +26,7 @@ class TermRepository(ITermRepository):
             ):
                 objects.append(s3_object)
 
-        objects.reverse()
+        objects = sorted(objects, key=lambda item: item.meta.data.get("LastModified"), reverse=True)
 
         if len(objects) == 0:
             raise FileNotFound(
