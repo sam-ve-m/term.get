@@ -32,6 +32,7 @@ class FilterMock:
             async def get_item():
                 item = MagicMock()
                 item.key = item_key_dummy
+                item.meta.data.get.return_value = 1
                 return item
 
             return get_item()
